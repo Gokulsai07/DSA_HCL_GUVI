@@ -1,0 +1,158 @@
+1.calling one constructor from another
+class Demo{
+Demo(){
+this(10);
+sop("Default constructor");
+}
+Demo(int x){
+sop("Parameterized constructor: "+x);
+}
+}
+public class Test2{
+psvm(s[]a){
+new Demo();
+}
+}
+2.
+class Bottle{
+String color;
+}
+public class Test3{
+psvm(String[] args){
+Bottle b1=new Bottle();
+b1.color="Blue";
+Bottle b2=b1;
+b2.color="Green";
+sop(b1.color);
+sop(b2.color);
+}
+}
+3.object as return type
+class Number{
+int value;
+ Number(int v){
+ value=v;
+}
+Number increment(){
+return new Number(value+1);
+}
+}
+public class Test3{
+psvm(s[]a){
+Number n1=new Number(5);
+Number n2=n1.increment();
+sop("n1: "+n1.value);
+sop("n2: "+n2.value);
+}
+}
+4.passing primitive vs object
+class Data{
+int x;
+}
+public class Test4{
+static void changePrimitive(int a){
+a=a+5;
+}
+static void changeObject(Data d){
+d.x=d.x+5;
+}
+psvm(s[]a){
+int num=10;
+changePrimitive(num);
+sop("Primitive : "+num);
+Data obj=new Data();
+obj.x=10;
+changeObject(obj);
+sop("object: "+obj.x);
+}
+}
+5.using this to return current object
+class Chain{
+int value;
+chain setValue(int v){
+value=v;
+return this;
+}
+void show(){
+sop("Value: "+value);
+}
+}
+public class Test5{
+psvm(s[]a){
+chain c=new chain();
+c.setValue(50).show();
+}
+}
+6.final object reference
+class Car{
+String model;
+}
+public class Test6{
+psvm(s[]a){
+final Car c=new Car();
+c.model="Honda";// allowed
+sop(c.model);
+//c=new Car();//not allowed
+}
+}
+7.changing object array elements
+class Item{
+String name;
+}
+public class Test7{
+psvm{s[]a){
+Item[] items={new Item(),new Item()};
+items[0].name="pen";
+Item[1].cost="10";
+sop(items);
+}
+}
+8.setting values via constructor and method
+class Student{
+String name;
+int marks;
+student(String n){
+name=n;
+}
+void setMarks(int m){
+name=m;
+}
+void display(){
+sop(name+" scored "+marks);
+}
+}
+public class Test8{
+psvm(s[]a){
+Student s=new Student("Amit");
+s.setMarks(90);
+s.display();
+}}
+9.multiple objects calling same method
+class Printer {
+void printMessage(String msg){
+sop("Message: "+msg);
+}}
+public class Test9{
+psvm(s[]a){
+Printer p1=new Printer();
+}}
+10.comparing objects
+class Point{
+int x,y;
+}
+public class Test10{
+psvm(s[]a){
+Point p1=new Point();
+p1.x=5;
+p1.y=10;
+Point p2=new Point();
+p2.x=5;
+p2.y=10;
+sop(p1==p2);// reference comparision
+}}
+11.modify array of objects
+class Product{
+String name;
+}
+public class Test11{
+static void renameProduct
