@@ -1,0 +1,113 @@
+**1. Read and display a int
+import java.util.Scanner;
+public class IntInput{
+publi static void main(string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter an integer");
+int num=sc.nextInt():
+sop("you entered:"+num);
+}}
+**2. read and display a double 
+import java.util.Scanner;
+public class DoubleInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a double value:");
+double num=sc.nextDouble();
+sop("you entered:"+num);
+}
+}
+**3. Read and display a float
+import java.util.Scanner;
+public class FloatInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a float value:");
+double num=sc.nextFloat();
+sop("you entered:"+num);
+}
+}
+**4. Read and display a long
+import java.util.Scanner;
+public class LongInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a long value:");
+long num=sc.nextLong();
+sop("you entered:"+num);
+}
+}
+**5. Read and display a short
+import java.util.Scanner;
+public class ShortInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a short value:");
+short num=sc.nextShort();
+sop("you entered:"+num);
+}
+}
+
+**6. Read and display a byte
+import java.util.Scanner;
+public class ByteInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a byte value:");
+byte num=sc.nextBtye();
+sop("you entered:"+num);
+}
+}
+**7. Read and display a boolean
+import java.util.Scanner;
+public class BooleanInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a boolean value:");
+boolean flag=sc.nextBoolean();
+sop("you entered:"+flag);
+}
+}
+**8. Read and display a char
+import java.util.Scanner;
+public class CharInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a char value:");
+char ch=sc.next().chatAt(0);
+sop("you entered:"+ch);
+}
+}
+**9. Read and display a single-word string
+import java.util.Scanner;
+public class WordInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter word:");
+string word=sc.next();
+sop("you entered:"+word);
+}
+}
+**10. Read and display a full sentence using nextLine()
+import java.util.Scanner;
+public class SentenceInput{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter a sentence value:");
+string sentence=sc.nextLine();
+sop("you entered:"+sentence);
+}
+}
+**11. Read two integers and display their sum
+import java.util.Scanner;
+public class SumTwoIntegers{
+public static void main (string [] args){
+Scanner sc=new Scanner(System.in);
+sop("enter first integer:");
+int a=sc.nextInt();
+sop("enter second integer:");
+int b=sc.nextInt();
+sop("sum:"+(a+b));
+}
+
+***S

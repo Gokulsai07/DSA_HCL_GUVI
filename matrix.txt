@@ -1,0 +1,221 @@
+*****************matrix***************
+1. find all elememts that appear more than once
+int[] arr={4,3,2,7,8,2,3,1};
+Map<Integer,Integer> map=new HashMap<>();
+for(int n:arr) map.put
+42. create and print 2d array
+intp[] arr={{1,2},{3,4}};
+for(int i=0;i<arr.length;i++)
+for(int j=0;j<arr[i].length;i++)
+sop("Ele,ent at("+i+",","+j+");+arr[i][j]);
+2.
+int[][] arr={{1,2}.{3,4}};
+int sum=0;
+for(int[] row:arr)
+for(int val:row)
+sum+=val;
+sop("sum = "+sum);
+3.transpose of a matrix
+int[][] arr={{1,2},{3,4}};
+for(int i=0;i<arr[0].length;i++)
+for(int j=0;j<arr[0].length;j++)
+soprint(arr[j][i]+" ");
+sop();
+4. multiply two matrix
+int[][] a={{1,2},{3,4}};
+int[][] b={{2,0},{1,2}};
+int[][] result=new int[2][2];
+for(int i=0;i<2;i++)
+for(int j=0;j<2;j++)
+for(int k=0;k<2;k++)
+result[i][j]+=a[i][j]*b[i][j];
+for(int[] row:result){
+for(int el:row)
+sop(el+"");
+sop();
+5.Diagonal 
+int[] matrix={{1,2,3},{4,5,6},{7.8.9}};
+sop("Principal diagonal");
+for(int i=0;i<matrix.length;i++)
+sop(matrix[i][j]+" ");
+6.upper triangle
+int[] matrix={{1,2,3},{4,5,6},{7.8.9}};
+for(int i=0;i<3;i++)
+for(int j=0;j<3;j++){
+if(j>=i)
+soprint(matrix[i][j]+" "):
+else
+soprint(" ");
+}
+sop();
+7.lower triangle
+int[] matrix={{1,2,3},{4,5,6},{7.8.9}};
+for(int i=0;i<3;i++)
+for(int j=0;j<3;j++){
+if(j<=i)
+soprint(matrix[i][j]+" "):
+else
+soprint(" ");
+}
+sop();
+8.noe matrix to another
+int[][] a={{1,2},{3,4}};
+int[][] b=new int[2][2];
+
+for(int=0;i<a.length;i++)
+for(int j=0;j<a[i].length;j++)
+b[i][j]=a[i][j];
+for(int[] row:b){
+for(int el:row)
+soprint(el+" ");
+dsop()}
+9.search an aelement in 2D array
+int[][] arr={{1,2},{3,4}};
+int key=3;
+boolean found=false;
+for(int[] row:arr)
+fot(int val:row);
+if(val==key)
+found=true;
+of(found)
+sop("Element found!");
+elseaop("elememts not found");
+10.find max elememt
+int[][] arr={{1,9},{3,4}};
+int max=arr[0][0];
+for(int[] row:arr)
+for(int val :row)
+if(val>max)
+max=val;
+sop("Maximun :"+max);
+11.find min element
+int[][] arr={{1,9},{3,4}};
+int min=arr[0][0];
+for(int[] row:arr)
+for(int val :row)
+if(val<min)
+min=val;
+sop("Manimun :"+min);
+12.row wise sum
+int[][] arr={{1,2},{3,4}};
+for(int i=0;i<arr.length;i++)
+int sum=o;
+for(int j=0;j<arr[i].length;j++)
+sum+=arr[i][j];
+sop("Sum of row"+i+":"+sum);
+13.column wise sum
+int[][] arr={{1,2},{3,4}};
+for(int i=0;i<arr.length;i++)
+int sum=o;
+for(int j=0;j<arr[i].length;j++)
+sum+=arr[j][i];
+sop("Sum of row"+i+":"+sum);
+14.reverse each row
+int[][] arr={{1,2,3},{4,5,6}};
+for(int i=0;i<arr.length;i++){
+int start=0,end=arr[i].length-1;
+while(start<end){
+int temp=arr[i][start];
+arr[i][start]=arr[i][end];
+arr[i][end]=temp;
+start++;
+end--;
+}
+}
+for(int[] row:arr){
+for(int val:row)
+soprint(val+" ");
+sop():
+}
+15.spiral order
+int[][] arr={{1,2,3},{4,5,6},{7,8,9}};
+int top=0,bottom=2,left=0,right=2;
+while(top<=bottom &&left<=right){
+for(int i=left;i<=right;i++)
+soprint(arr[top][i]+" ");
+top++;
+for(int i=top;i<=bottom;i++)
+soprint(arr[i][right]+"");
+right--;
+if(top<=bottom)
+for(int i=right;i>=left;i--)
+soprint(arr[bottom][i]+"");
+bottom--;
+if(left<=right)
+for(int 
+16. identity 
+int[][] mat={{1,0,0},{0,1,0},{0,0,1}};
+boolean isIdentity=true;
+fir(int i=0;i<mat.length;i++)
+for(int j=0;j<mat.length;j++)
+if((i==j &&mat[i][j]!=1)||(i!=j&& amt[i][j]!=0))
+isIdentity=false;
+sop(i?"Identity MAtrix":"not an indentity matrix");
+17.symmetric matrix
+int[][] mat{{1,2,3,},{2,4,5},{3,5,6}};
+boolean isSymmetric=true;
+for(int i=0;j<mat.length;i++)
+for(int j=0;j<mat.length;j++)
+if(mat[i][j]!=mat[j][i])
+isSymmetric=false;
+sop(isSymmetric?"symmetric matrix":"not symmetric");
+18.sort each row of matrix
+int[][] mat={{3,2,1},{6,5,4}};
+for(int[] row:mat)
+Array.sort(row);
+for(int[] row:mat){
+for(int val:row)
+soprint(val+"");
+sop();
+}
+19.replace even numbers with 0
+int[][] arr={{1,2},{3,4}};
+for(int i=0;i<arr.length;i++)
+for(int j=0;j<arr[i].length;j++)
+if(arr[i][j]%2==0)
+arr[i][j]=0;
+for(int[] row:arr)
+for(int el:row)
+soprint(el+"");
+sop();
+20.replace odd numbers with 0
+int[][] arr={{1,2},{3,4}};
+for(int i=0;i<arr.length;i++)
+for(int j=0;j<arr[i].length;j++)
+if(arr[i][j]%2!=0)
+arr[i][j]=0;
+for(int[] row:arr)
+for(int el:row)
+soprint(el+"");
+sop();
+21.count frequency
+int[][] arr={{1,2,2},{3,1,2}};
+HashMap<Integer,Integer>map=new HashMap<>();
+for(int[] row:arr)
+for(int val:row)
+map.put(val,map.getOrDefault(val,0)+1);
+for(int key:map.keySet())
+sop(key+":"+map.get(key));
+22.print matrix Border
+int[][] mat={{1,2,3},{4,5,6},{7,8,9}};
+int row=mat.length;
+int col=mat[0],length;
+for(int i=0;i<row;i++){
+for(int j==0;j<col;j++){
+if(i==0||i==row-1||j==0||j==col-1)
+soprint(mat[i][j]+"");
+else
+sop(" ");
+}
+sop();
+}
+23. snake format
+int[][] mat={{1,2,3},{4,5,6},{7,8,9}};
+for(int i=0;i<mat.length;i++){
+if(i%2==0)
+for(int j=0;j<mat[i].length;j++)
+soprint(mat[i][j]+"");
+else
+for(int j=mat[i].length-1;j>=0;j--)
+soprint(mat[i][j]+"");
+

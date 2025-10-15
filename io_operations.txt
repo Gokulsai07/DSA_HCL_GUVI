@@ -1,0 +1,20 @@
+import java.io.*;
+public class FW{
+public static void main(String[] args){
+FileWriter fw=new FileWriter("D:\HCL Training\codes.txt");
+String str;
+InputStreamReader ir=mew InputStreamReader(system.in);
+BufferedReader br=new BufferedReader(ir);
+System.out.println("Enter the string for writing");
+str=br.readLine();
+try{
+fw.write(str);
+fw.close();
+}
+catch(Expection e)
+{
+System.out.println(e);
+}
+System.out.println("Succe");
+}
+}

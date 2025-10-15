@@ -1,0 +1,33 @@
+1.iterating hashmap
+import java.util.*;
+HashMap<String,Integer> map=new HashMap<>();
+map.put("A",1);
+map.put("B",2);
+for(Map.Entry<String,Integer> e: map.entrySet())
+sop(e.getkey()+"->"+e.getValue());
+2.TreeMap
+import java.util.*;
+TreeMap<String,Integer> map=new TreeMap<>();
+map.put("C",3);
+map.put("A",1);
+map.put("B",2);
+sop(map);
+3.vector 
+import java.util.*;
+Vector<String> v=new Vector<>();
+v.add("Red");
+v.add("Green");
+v.add("Blue");
+sop(v);
+4.LinkedHashSet
+import java.util.*;
+LinkedHashSet<String> set=new LinkedHashSet<>();
+set.add("A");
+set.add("B");
+set.add("C");
+sop(set);
+5.Collections.sort()
+import java.util.*;
+ArrayList<Integer> list=new ArrayList<>(Arrays.asList(5,3,8,1));
+Collections.sort(List);
+sop(list);

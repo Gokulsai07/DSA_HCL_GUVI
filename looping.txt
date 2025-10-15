@@ -1,0 +1,249 @@
+1.print numbers from 1 to 50
+for(int i=1;i<=50;i++){
+Soprint(i+" ");
+}
+2.print number 50 to 1
+for(int i=50;i>=1;i--){
+soprint(i+ " ");
+}
+3.print even numbers
+for(int i=2;i<=50;i+=2){
+soprint(I+ " ");
+}
+4.print odd numbers
+for(int i=1;i<=50;i+=2){
+soprint(i+" ");
+}
+5.sum of 1 to 50
+int sum=0;
+for( int i=1;i<=50;i++){
+sum+=i;
+}
+sop("sum="+sum);
+6. product of 1 to 10
+long product=1;
+for(int i=1;i<=10;i++){
+product*=i;
+}
+sop("product"+product);
+7.sum of even numbers
+int sum=0;
+for(int i=2;i<=50;i+=2)
+{
+sum+=i;
+}
+sop("sum of even numbers"+sum);
+8.sum od odd numbers
+int sum=0;
+for(int i=1;i<=50;i+=2)
+{
+sum+=i;
+}
+sop("sum of odd numbers"+sum);
+9.divisible by 5 from 1 to 50
+for(int i=1;i<=50;i++){
+if(i%5==0){
+sop(i+" ");
+}
+}
+10.divisible by 3 and 5
+for(int i=1;i<=100;i++){
+if(i%3==0 && i%5==0){
+sop(i+" ");
+}
+}
+11.print star pattern(right triangle)
+for(int i=1;i<=5;i++){
+for(int j=1;j<=i;j++){
+soprint("*");
+}
+sop();
+}
+12.inverted triangle star pattern
+for(int i=5;i>=1;i--){
+for(int j=1;j<=i;j++){
+soprint("*");
+}
+sop();
+}
+13. square pattern of stars
+for(int i=1;i<=5;i++){
+for(int j=1;j<=5;j++){
+soprint("*");
+}
+sop();
+}
+14. right -angled number triangle
+for(int i=1;i<=5;i++){
+for(int j=1;j<=i;j++){
+soprint(j+" ");
+}
+sop();
+}
+15.prime number
+int num=29;
+boolean isPrime=true;
+for(int i=2;i<=num/2;i++){
+if(num%1==0){
+isPrime=flase;
+break;
+}
+}
+if(isPrime)
+sop(num+"is a prime number.");
+else
+sop(num+"is not a prime number.");
+16.prime numbers 1 t 50
+for(int mum=2;i<=50;i++){
+boolean isPrime=true;
+for(int i=2;i<=num/2;i++){
+if(num%i==0){
+isPrime=flase;
+break;
+}
+sop(num+" ");
+}
+}
+17.palingrome
+int num=121,rev=0,temp=num;
+while(temp!=0){
+int digit=temp%10;
+rev=rev*10+digit;
+temp/=10;
+}
+if(rev==num)
+sop(num+"is a palindrome.");
+else
+sop(num+"is not a palindrome.");
+18.palindrome numbers from 1 to 200
+for(int num=1;num<=200;num++){
+int rev=0;temp=num;
+while(temp!=0){
+int digit=temp%10;
+rev=rev*10+10;
+temp/=10;
+}
+if(rev==num)
+System.out.println(num+" ");
+}
+19.Armstrong numbers from 1 to 1000
+for(int num=1;num<=1000;num++){
+int temp=num,sum=0,digit=String.vlaueOf(num).length();
+while(temp!=){
+int digit=tmep%10;
+sum+=Math.pow(digit,digits);
+temp/=10;
+}
+if(sum==num)
+System.out,print(num+" ");
+}
+20.factorial of number
+int num=5;
+laon fact;
+for(int i;i<=num;i++){
+fact*=i;
+}
+sop(:Factorial of"+num+"is"+fact);
+}
+21. factorial of from 1 to 10
+for(int i=1;i<=10;i++){
+long fact=1;
+for(int j=1;j<=i;j++}
+fact*=j;
+}
+sop("Factorial of"+i+"is"+fact)'
+}
+22.Fibonacci serics
+int n1=0,n2=1,n3;
+Soprint(n1+" "+n2+" ");
+for(int i=2;i<10:i++){
+n3=n1+n2;
+soprint(n3+" ");
+n1=n2;
+n2=n3;
+23.multiplication
+int num=7;
+for(int i=7;i<=10;i++){
+sop(num+"x"+i+"="+(num*i));
+}
+23.count digits
+int num=98765,count=0;
+while(num!=0){
+num/=10;
+count++;
+}
+sop("Total digits:"+count);
+}
+24.reverse a nuber
+int num=12345,rev=0;
+while(num!-0){
+rev=rev*10+num%10;
+num/=10;
+}
+sop("reverse of"+rev);
+25.print all lowercase alphabets
+for(char c='a';c<='z';c++){
+sop(c+" ");
+}
+26. ascii values
+for(int c='A';c<='Z';c++){
+sop("ASCII OF"+c+"="+int(c));
+}
+27.count vowels in string using loop
+String sr "Hello Java Loop Programs";
+int count=0;
+for(int i=0;i<str.length();i++){
+char ch=Character.toLowerCase(str.charAt(i));
+if("aeiou".indexOf(ch)!=-1){
+count++;
+}
+}
+sop("vowels count="+count);
+28.perfect number
+ int num=28,sum=0
+ for(int i=1;i<num;i++){
+ if(num&i==0){
+ sum+=i;
+ }
+ if(sum==num)num
+ sop(num+"is a perfect number");
+ else
+ sop(num+" is not a perfect number");
+29.binary of a number using loop
+int num=13;
+String binary="";
+while(num>0){
+binary=(num%2)+binary;
+num/=2;
+}
+sop("Binary="+binary);
+}
+30.binary to decimal
+for(int num=1;num<=10;num++){
+int n=num;
+String binary="";
+while(num>0){
+binary=(num%2)+binary;
+num/=2;
+}
+sop(num+"=>+binary);
+}
+31.prime digits in a given numbvers
+int num=123456789;
+sop(:prime in digits:");
+while(num1=0){
+int d=num%10;
+if(d==2||d
+32.swap two numbersint a=5,b=7;
+a=a+b;
+b=a-b;
+a=a-c;
+sop();
+33. fimd max digit
+int n=3456789,max=0;
+while(n!=0){
+int d=n%10;
+if(d>max)max=d;
+n/=10;
+}
+sop(max digits"+max); 

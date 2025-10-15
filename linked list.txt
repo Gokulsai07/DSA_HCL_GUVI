@@ -1,0 +1,46 @@
+import java.util.Scanner
+//node for singly linked list
+class Student{
+int id;
+String name;
+float marks;
+Student next;
+
+Student(int id,String name,float marks){
+this.id=id;
+this.name=name;
+this.marks=marks;
+this.next=null;
+}
+}
+class StudentList{
+student head;
+//add student at end
+void addStudent(int id ,String name,float marks){
+Student newStudent=new Student(id,name,marks);
+if(head==null){
+head=newStudent;
+}else{
+Student temp=head;
+while(temp.next!=null){
+temp=temp.next;
+}
+temp.next=newStudent;
+}
+System.out.println ("Student "+name"(ID:"+id+") added successfully!);
+}
+// delete student by id
+void deleteStudent(int id){
+if(head==null){
+System.out.println("no records to delete");
+}
+if(head.id==id){
+sop("student"+head.name+"(ID:"+id") deleted.");
+head=head.next;
+return;
+}
+student temp=head;
+while(temp.next!=null && temp.next!=id){
+temp=temp.next;
+}
+if(temp.next==null){

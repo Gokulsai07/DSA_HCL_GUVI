@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+public class BubbleSort {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input: size of array
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        // Input: array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Bubble Sort
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        // Output: sorted array
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+*****************
+import java.util.*;
+
+public class MergeAndSortLists {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input: first number
+        int n = sc.nextInt();
+        String num1 = sc.next(); // read digits as string
+
+        // Input: second number
+        int m = sc.nextInt();
+        String num2 = sc.next(); // read digits as string
+
+        // Use TreeSet to store digits (unique + sorted)
+        Set<Integer> set = new TreeSet<>();
+
+        // Add digits of first number
+        for (char c : num1.toCharArray()) {
+            set.add(c - '0');
+        }
+
+        // Add digits of second number
+        for (char c : num2.toCharArray()) {
+            set.add(c - '0');
+        }
+
+        // Print merged, unique, sorted digits
+        for (int digit : set) {
+            System.out.print(digit);
+        }
+    }
+}
+******************
+import java.util.*;
+
+public class SearchInsertPosition {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input: array elements
+        String[] input = sc.nextLine().split(" ");
+        int[] arr = new int[input.length];
+        for (int i = 0; i < input.length; i++) {
+            arr[i] = Integer.parseInt(input[i]);
+        }
+
+        // Input: target element
+        int target = sc.nextInt();
+
+        // Find search insert position
+        int index = searchInsert(arr, target);
+
+        // Output
+        System.out.println(index);
+    }
+
+    public static int searchInsert(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid] == target) {
+                return mid; // target found
+            } else if (nums[mid] < target) {
+                left = mid + 1; // search right
+            } else {
+                right = mid - 1; // search left
+            }
+        }
+
+        return left; // insertion position
+    }
+}

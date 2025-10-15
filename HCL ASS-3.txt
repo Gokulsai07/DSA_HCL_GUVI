@@ -1,0 +1,141 @@
+1..Reordering elements in a list
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        List<Integer> list = new ArrayList<>();
+
+        // read input numbers
+        for (int i = 0; i < n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        // create two lists for odds and evens
+        List<Integer> odds = new ArrayList<>();
+        List<Integer> evens = new ArrayList<>();
+
+        // use iterator to separate odds and evens
+        Iterator<Integer> it = list.iterator();
+        while (it.hasNext()) {
+            int num = it.next();
+            if (num % 2 != 0) {
+                odds.add(num);
+            } else {
+                evens.add(num);
+            }
+        }
+
+        // merge odds first then evens
+        List<Integer> result = new ArrayList<>();
+        result.addAll(odds);
+        result.addAll(evens);
+
+        // print the result
+        for (int i = 0; i < result.size(); i++) {
+            System.out.print(result.get(i));
+            if (i < result.size() - 1) {
+                System.out.print(" ");
+            }
+        }
+
+        sc.close();
+    }
+}
+2..Implement queue using stacks
+import java.util.*;
+
+public class Main {
+
+    static class QueueUsingStacks {
+        Stack<Integer> stack1 = new Stack<>();
+        Stack<Integer> stack2 = new Stack<>();
+
+        // Enqueue operation
+        public void enqueue(int x) {
+            stack1.push(x);
+        }
+
+        // Dequeue operation
+        public int dequeue() {
+            if (stack1.isEmpty() && stack2.isEmpty()) {
+                throw new RuntimeException("Queue is empty");
+            }
+
+            if (stack2.isEmpty()) {
+                while (!stack1.isEmpty()) {
+                    stack2.push(stack1.pop());
+                }
+            }
+            return stack2.pop();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();  // number of operations
+        QueueUsingStacks q = new QueueUsingStacks();
+
+        for (int i = 0; i < n; i++) {
+            String operation = sc.next();
+
+            if (operation.equals("enqueue")) {
+                int x = sc.nextInt();
+                q.enqueue(x);
+            } else if (operation.equals("dequeue")) {
+                try {
+                    System.out.println(q.dequeue());
+                } catch (RuntimeException e) {
+                    System.out.println("Queue is empty");
+                }
+            }
+        }
+
+        sc.close();
+    }
+}
+3.Reverse a queue
+import java.util.*;
+
+class Main {
+    // Function to reverse a queue
+    public static void reverseQueue(Queue<Integer> queue) {
+        // ✅ FIXED LINE (capital S and space after >)
+        Stack<Integer> stack = new Stack<>();
+
+        // Move all elements from queue to stack
+        while (!queue.isEmpty()) {
+            stack.push(queue.poll());
+        }
+
+        // Move back from stack to queue
+        while (!stack.isEmpty()) {
+            queue.add(stack.pop());
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt(); // number of elements
+        Queue<Integer> queue = new LinkedList<>();
+
+        for (int i = 0; i < n; i++) {
+            queue.add(sc.nextInt());
+        }
+
+        reverseQueue(queue);
+
+        // Print without trailing space
+        for (int i = 0; i < n; i++) {
+            System.out.print(queue.poll());
+            if (i < n - 1) {
+                System.out.print(" ");
+            }
+        }
+    }
+}
+
