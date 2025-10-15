@@ -1,0 +1,8 @@
+void displayBackward(){
+if(head==null){
+sop("List is empty:");
+return;
+}
+Node temp=head;
+while(temp.next!=null) temp=temp.next;
+sop
