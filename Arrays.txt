@@ -1,0 +1,228 @@
+1.print an array
+int[] arr={1,2,3,4,5};
+for(int i:arr)
+sop(i+" ");
+2.sum of array elememts
+int[] arr={10,20,30,40,50};
+for(int num:arr) sum+=num;
+sop(sum);
+3.find largest element
+int[] arr={7,3,9,5};
+int max=arr[0];
+for(int num:arr) if(num>max) max=num;
+sop(max);
+4.find smallest element 
+int[] arr={7,3,9,5};
+int min=arr[0];
+for( num:arr) if(num<min) min=num;
+sop(min);
+5.Reverse an array
+int[] arr={1,2,3,4};
+for(int i=arr.length-1;i>=0;i--)
+sop(arr);
+6. count even and odd numbers
+int[] arr={2,3,4,5,6};
+int even=0,odd=0;
+for(int n:arr) if(n%2==0) even++; else odd++;
+sop("Even:"+even+",odd:"+odd);
+7.Search for an element
+int[] arr={1,5,8,9,};
+int key=8;
+boolean found=false;
+for(int i:arr) if(i==key)found =true;
+sop(found?"Found":"not found);
+8.sort array ascening
+int[] arr={4,2,9,1}
+Array.sort(arr);
+sop(Array.toString(arr));
+9. sort array descending 
+Integer[] arr={4,2,9,1};
+Array.sort(arr, Collections.reverseOrder());
+sop(Array.toStringOrder(arr));
+** transformation& conversion
+11.remove duplicates
+int[] arr={1,2,2,3};
+set<Integer> set=new LinkedHashSet<>();
+for(int n:arr) set.add(n);
+sop(set);
+12.merge two arrays
+int[] a={1,2}, b={3,4};
+int[] c=new int[a.length+b.length];
+system.array(a,0,c,0,a.length);
+System.array(b,0,c,a.length,b.length);
+sop(Array.toString(c));
+13.Left rotate by 1
+int[] arr={1,2,3,4};
+int first=arr[0];
+for(int i=0;i<arr.length-1;i++) arr[i]=arr[i+1];
+arr[arr.legth-1]=first;
+sop(Array.toString(arr));
+14.second largest number
+int[] arr={10,20,30,40};
+Array.sort(arr);
+sop(arr[arr.length-2]);
+15.count positive,negative,zeros
+int[] arr={0,-1,2,0,-3};
+int pos=0,neg=0,zero=0;
+for(int n:arr){
+if(n>0) neg++;
+else zero++;
+}
+sop("positive"+pos+"negative"+neg+"zero"+zero);
+16. check if array is sorted
+int[] arr={1,2,3,4};
+boolean sorted=true;
+for(int i=0;i<arr.length-1;i++)if(arr[i]>arr[i+1]) sorted=false;
+sop(sorted?"sorted":"not sorted");
+17.print elememts at even indices
+int[] arr={5,6,7,8,9};
+for(int i=0;i<arr.length;i+=2)
+sop(arr[i]+" ");
+18.find k-th smallest element
+int[] arr={9,4,7,1,3};
+int k=3;
+Array.sort(arr);
+sop(arr[k-1]);
+19.replace with nagative number with 0
+int[] arr={1,-3,4};
+for(int i=0;i<arr.length;i++) if(arr[i]<0) arr[i]=0;
+sop(Array.toString(arr));
+20.count occurrences of digit in array
+int[] arr={1,2,1,3,2,4};
+int[] count=new int[10];
+for(int n:arr) count[n]++;
+for(int i=0;i<count.legth;i++) if(count[i]>0)
+sop(i+"=>"+count[i]);
+21. move all nagative numbers to one side
+int[] arr={1,-2,3,-4,5};
+Array.sort(arr);
+sop(Array.toString(arr));
+22.find common elemens in two arrays
+int[] arr={1,2,3,4},b={3,4,5};
+Set<Integer> set=new 	HashSet<>();
+for(int i:a) set.add(i);
+for(int j:b) if(set.contains(j)) soprint(j+" ");
+23. remove all zeros
+int[] arr={0,1,0,2,3};
+arr=Array.stream(arr);filter(n->n!=0).toArray();
+sop(Array.toString(arr));
+24.Binary Search(Assumes sorted Array)
+int[] arr={1,2,3,4,5}:
+int index=Arrays.binarysearch(arr,4);
+sop(index);
+25.find all pairs with sum=10
+int[] arr={1,2,3,7,8,9};
+for(int i=0;i<arr.length;i++){
+for(int j=i+1;j<arr.legth;j++){
+if(arr[i]+arr[j]==10)
+sop(arr[i]+"+"+arr[j]+"=10");
+}
+}
+26.replace all even numebrs with -1
+int[] arr={2,3,4,5};
+for(int i=0;i<arr.length;i++) if(arr[i]%2==0) arr[i]=-1;
+sop(Array.toString(arr));
+27.remove first number
+int[] arr={10,20,30};
+arr=array.ofRange
+28.find elememts greater than average
+ int[] arr={2,4,6,8};
+ double avg=Arrays.stream(arr).average().orElse();
+ for(int n:arr) if((n>avg) 
+ sop(n+" ");
+29.find the index os a given element
+int[] arr={10,20,30},
+int key=20;
+int idx=-1;
+for(int i=0;i<arr.legth;i++) if(arr[i]==key){
+idx=1;
+break;
+}
+sop("index: "+idx);
+30.check if array is palindrome
+int[] arr={1,2,3,2,1};
+boolean isPal=true;
+for(int i=0;i<arr.legth/2;i++){
+if(arr[i]!=arr[arr.legth-1-i) isPal=false;
+}
+sop("Palidrome?"+isPal);
+31.convert array to string 
+int[] arr={1,2,3};
+String str=Array.toString(arr);
+sop(str);
+32.count elements greater than a given number
+int[] arr={3,7,2,9,5};
+int count=0,x=5;
+for(int n:arr) if(n>x) count++;
+sop("count"+count);
+33.replace every element with the next greater
+int[] arr={16,17,4,3,5,2};
+int max=-1;
+for(int i=arr.legth-1;i>=0;i--){
+int temp=arr[i];
+arr[i]=max;
+if(temp>max) max=temp;
+}
+sop(Array.toString(arr));
+34.replace all elememts with square
+int[] arr={1,2,3,4};
+for(int i=0;i<arr.length;i++) arr[i]*=arr[i];
+sop(Array.toString(arr))
+35.segregate 0s and 1s
+int[] arr={0,1,1,0,1,0};
+Arrays.sort(arr);
+sop(Array.toString(arr));
+36.merge two arrays
+int[] a={1,3,5},b={2,4,6};
+int[] result=new int[a.legth+b.legth];
+int i=0,j=0,k=0;
+while(i<a.legth && j<b.legth){
+result[k++]=a[i]<b[J]?a[i++]:b[j++];
+}
+while(i<a.legth) result[k++]=a[i++];
+while(i<b.legth) result[k++]=b[i++];
+sop(Array.toString(result));
+37. all leaders in array(imp)
+int[] arr={16,17,4,3,5,2};
+List<Integer> leaders=new ArrayList<>();
+int max=Integer.MIN VALUE;
+for(int i=arr.legth-1;i>=0;i--){
+if(arr[i]>max){
+max=arr[i];
+leaders.add( max);
+}
+}
+collections.reverse(leaders);
+sop(leaders);
+38. count pairs with even sum
+int[] arr={1,2,3,4};
+int count=0;
+for(int i=0;i<arr.legth;i++){
+for(int j=i+1;j<arr.legth;j++){
+if((arr[i]+arr[j])%2==0)
+count++;
+}
+}
+sop("Even sum pairs: "+count);
+39. check arrayis strictly increasing
+int[] arr={1,3,5,7};
+boolean isIncreasing=true;
+for(int i=1;i<arr.legth;i++){
+if(arr[i]<=arr[i-1]){
+isIncreasing=false;
+break;
+}
+}
+40.find all triplets with given sum
+int[] arr={1,2,3,4,5};
+int sum=9;
+for(int i=0;i<arr.legth;i++){
+for(int j=i+1;j<arr.legth;j++){
+for(int k=j+1;k<arr.legth;k++){
+if(arr[i]+arr[j]+arr[k]==sum){
+sop(arr[i]+","+arr[j]+","+arr[k]_;
+}
+}
+}
+}
+

@@ -1,0 +1,9 @@
+//for very large n,this will be slow compared to optimized methods (like 
+int power(int x,intn){
+if(n==0)
+return 1;
+int half=power(x,n/2);
+if(n%2==0)
+return hlaf*half;
+else
+**********finding dynamic programing or what id dynamic programing
