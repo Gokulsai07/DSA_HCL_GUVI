@@ -1,0 +1,28 @@
+1.check if i th bit is set
+public class checkIthBit{
+public static void main(String[] args){
+int n=13;
+int i=2;
+int mask=1<<i;
+if((n&mask)!=0)
+sop("Bit "+i+"is set");
+else
+sop("Bit "+i+is not set"):
+}
+}
+2.set the i th bit
+public class SetIthBit{
+public static void main(String[] args){
+int n=9;
+int i=1;
+int mask=1<<i;
+n=n|mask;
+sop("new number: "+n);
+}
+}
+3.clear the ith bit
+int n=15;
+int i=2;
+int mask=~(1<<i);
+n=n&mask;
+sop("New number : "+n)

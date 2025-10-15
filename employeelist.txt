@@ -1,0 +1,154 @@
+
+// Node for singly linked list
+class Employee {
+    int employeeId;
+    String employeeName;
+    float salary;
+    Employee next;
+
+    Employee(int employeeId, String employeeName, float salary) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.salary = salary;
+        this.next = null;
+    }
+}
+class EmployeeList{
+Employee head;
+//add employee at end
+void addEmployee(int employeeId,String employeeName,float salary){
+Employee newEmployee=new Employee(employeeId,employeeName,salary);
+if(head==null){
+head=newEmployee;
+}else{
+Employee temp=head;
+while(temp.next!=null){
+temp=temp.next;
+}
+temp.next=newEmployee;
+}
+System.out.println("Employee"+employeeName+"(Employee ID:"+employeeId+") added successfully!");
+}
+//delete employee by id
+void deleteEmployee(int employeeId){
+if(head==null){
+sop("no records to delete");
+return;
+}
+if(head.employeeId==employeeId){
+sop("Employee"+head.employeeName+"(Employee ID:"+employeeId+") deleted.");
+head=head.next;
+return;
+}
+Employee temp=head;
+while(temp.next!=null && temp.next!=employeeId){
+temp=temp.next;
+}
+if(temp.next==null){
+sop("employee wirh id"+employeeId+" not found");
+}else{
+sop("employee"+temp.next.employeeName+"(Employee ID:"+employeeId+") deleted);
+temp.next=temp.next.next;
+}
+}
+//display all employee records
+void displayEmplooyee(){
+if(head==null){
+sop("no employee records available.");
+return;
+}
+sop("Employee records");
+Employee temp=head;
+while(temp!=null){
+sop("  ->Employee ID:"+temp.employeeId+"Employee Name:"+temp.employeeName+",Employee salary:"+temp.salary);
+temp=temp.next;
+}
+}
+//search employee bu id
+void searchEmployee(int employeeId){
+Employee temp=head;
+while(temp!=null){
+if(temp.employeeId==EmployeeID){
+sop("Found Employee->ID:"+temp.employeeId+",Employee Name:"+temp.employeeName+",salary:"+temp.salary);
+return;
+}
+temp=temp.next;
+}
+sop(" Employee with ID"+employeeId+"not found");
+}
+//find highest salary(high paid)
+void findHighPaid(){
+if(head==null){
+sop("no records available.");
+return;
+}
+Employee temp=head;
+Employee HighPaid=head;
+while(temp!=null){
+if(temp.salary>HighPaid.salary){
+HighPaid=temp;
+}
+temp=temp.next;
+}
+sop("High paid ->ID:"+HighPaid.employeeId+", Employee Name:"+HighPaid.employeeName+"salary:"+HighPaid.salary);
+}
+// count total employee
+void countEmployee(){
+int count =0;
+Employee temp=head;
+while(temp!=null){
+count++;
+temp=temp.next;
+}
+sop("total number of employees:"+count);
+}
+public class EmployeeRecords{
+public static void main(String [] args){
+Scanner sc=new Scanner(System.in);
+EmployeeList e1=new EmployeeList();
+int choice;
+do{
+sop("**************employee records***************");
+sop("1.Add");
+sop("2.Delete");
+sop("3.Display");
+sop("4.Search");
+sop("5.Fing Highest paid");
+sop("6.Count");
+sop("7.Exit");
+sop("Enter your choice: ");
+choice=sc.nextInt();
+
+swicth(choice){
+case 1:
+sop("enter employee id:");
+int employeeId=sc.nextInt();
+sc.nextLine();
+sop("enter employee name:");
+String employeeName=sc.nextLine();
+sop("enter salary:");
+float salary=sc.nextFloat();
+e1.addEmployee(employeeId,employeeName,salary);
+break;
+case 2:
+sop("enter employee id to delete:");
+int delID=sc.nextInt();
+e1.deleteEmployee(delID);
+break;
+case 3:
+e1.displayEmplooyee();
+break:
+case 4:
+sop("enter employee id to search:");
+int searchId=sc.nextInt()
+s1.searchEmployee(searchId);
+break;
+case 5:
+e1.findHighPaid();
+break;
+case 6:
+e1.countEmployee();
+break;
+case 7:
+sop("Exiting ....goodbyeee");
+
